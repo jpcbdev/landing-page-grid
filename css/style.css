@@ -1,0 +1,122 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    background-color: palegoldenrod;
+}
+
+:root {
+    --colorStandard: white;
+    --fontStandard: italic 1.5rem tahoma;
+    --alignCenter: center;
+    --contentHeight: 60vh;
+    --sizeFull: 100%;
+    --sizeMiddle: 50%;
+    --sizeMinimal: 5%;
+    --marginAuto: auto;
+    --marginNone: 0%;
+    --bgStandard: blue;
+    --bgStandard02: palegoldenrod;
+    --displayFlex: flex;
+    --displayBlock: block;
+    --directionCol: column;
+    --justifySpaceBetween: space-between;
+    --decorationNone: none;
+}
+
+.container {
+    margin: var(--sizeMinimal);
+    height: var(--contentHeight);
+}
+
+.nav {
+    display: var(--displayFlex);
+    color: var(--colorStandard);
+    font: var(--fontStandard);
+    background: var(--bgStandard);
+    justify-content: var(--justifySpaceBetween);
+}
+
+.nav--icon {
+    margin: var(--sizeMinimal);
+}
+
+.nav--options {
+    display: var(--displayFlex);
+}
+
+.nav--options__item {
+    align-self: var(--alignCenter);
+    color: var(--colorStandard);
+    text-decoration: var(--decorationNone);
+}
+
+.nav-details {
+    margin: var(--sizeMinimal);
+}
+
+.nav--details__item {
+    margin: var(--marginNone);
+    text-align: var(--alignCenter);
+}
+
+.slider {
+    margin-top: var(--sizeMinimal);
+    height: var(--sizeFull);
+}
+
+.slider--image {
+    width: var(--sizeFull);
+    height: var(--sizeFull);
+}
+
+.main {
+    display: var(--displayFlex);
+    justify-content: var(--alignCenter);
+    height: var(--sizeFull);
+    background-color: var(--bgStandard);
+}
+
+.main--forms {
+    text-align: var(--alignCenter);
+    display: var(--displayFlex);
+    flex-direction: var(--directionCol);
+    align-self: var(--alignCenter);
+}
+
+.main--forms__item {
+    margin: var(--sizeMinimal);
+}
+
+.section {
+    display: var(--displayFlex);
+    height: var(--sizeFull);
+    background-color: var(--bgStandard);
+}
+
+.section--description {
+    overflow: hidden;
+    width: var(--sizeMiddle);
+    height: var(--sizeFull);
+    text-align: var(--alignCenter);
+}
+
+.section--description__item {
+    color: var(--colorStandard);
+}
+
+.section--img {
+    width: var(--sizeMiddle);
+    height: var(--sizeFull);
+}
+
+.footer {
+    display: var(--displayFlex);
+    align-items: var(--alignCenter);
+    height: var(--sizeFull);
+    background-color: var(--bgStandard02);
+}
+
+.footer-section {
+    text-align: var(--alignCenter);
+}

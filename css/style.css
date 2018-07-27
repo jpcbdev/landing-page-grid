@@ -17,9 +17,7 @@ body {
     --marginNone: 0%;
     --bgStandard: blue;
     --bgStandard02: palegoldenrod;
-    --displayFlex: flex;
-    --displayBlock: block;
-    --directionCol: column;
+    --displayGrid: grid;
     --justifySpaceBetween: space-between;
     --decorationNone: none;
 }
@@ -30,11 +28,11 @@ body {
 }
 
 .nav {
-    display: var(--displayFlex);
-    color: var(--colorStandard);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
     font: var(--fontStandard);
-    background: var(--bgStandard);
-    justify-content: var(--justifySpaceBetween);
+    background-color: var(--bgStandard);
 }
 
 .nav--icon {
@@ -42,22 +40,21 @@ body {
 }
 
 .nav--options {
-    display: var(--displayFlex);
+    margin: var(--sizeMinimal);
 }
 
 .nav--options__item {
-    align-self: var(--alignCenter);
     color: var(--colorStandard);
     text-decoration: var(--decorationNone);
 }
 
-.nav-details {
+.nav--details {
+    text-align: right;
     margin: var(--sizeMinimal);
 }
 
 .nav--details__item {
-    margin: var(--marginNone);
-    text-align: var(--alignCenter);
+    color: var(--colorStandard);
 }
 
 .slider {
@@ -71,17 +68,15 @@ body {
 }
 
 .main {
-    display: var(--displayFlex);
-    justify-content: var(--alignCenter);
     height: var(--sizeFull);
     background-color: var(--bgStandard);
 }
 
 .main--forms {
+    display: grid;
+    justify-content: var(--alignCenter);
+    align-self: center;
     text-align: var(--alignCenter);
-    display: var(--displayFlex);
-    flex-direction: var(--directionCol);
-    align-self: var(--alignCenter);
 }
 
 .main--forms__item {
@@ -89,34 +84,29 @@ body {
 }
 
 .section {
-    display: var(--displayFlex);
     height: var(--sizeFull);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
     background-color: var(--bgStandard);
 }
 
 .section--description {
-    overflow: hidden;
-    width: var(--sizeMiddle);
-    height: var(--sizeFull);
+    display: grid;
     text-align: var(--alignCenter);
-}
-
-.section--description__item {
     color: var(--colorStandard);
 }
 
 .section--img {
-    width: var(--sizeMiddle);
+    width: var(--sizeFull);
     height: var(--sizeFull);
 }
 
 .footer {
-    display: var(--displayFlex);
-    align-items: var(--alignCenter);
-    height: var(--sizeFull);
-    background-color: var(--bgStandard02);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.footer-section {
+.footer--section {
     text-align: var(--alignCenter);
 }
